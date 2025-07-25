@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dewllers – Aesthetic Dropshipping</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #2d3e50;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    nav {
+      background-color: #1a252f;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      background-color: #fafafa;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .product h3 {
+      margin: 10px 0;
+    }
+    .product button {
+      background-color: #2d3e50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .product button:hover {
+      background-color: #1a252f;
+    }
+    section.contact {
+      margin-top: 40px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+    footer {
+      background-color: #2d3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dewllers</h1>
+    <p>Aesthetic Dropshipping Collection</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="home">
+    <h2>Welcome to Dewllers</h2>
+    <p>We deliver beautifully curated products straight to your door – no inventory, no stress. Discover unique items you'll love.</p>
+
+    <section id="shop">
+      <h2>Our Products</h2>
+      <div class="products">
+        <div class="product">
+          <img src="https://via.placeholder.com/250" alt="Product 1" />
+          <h3>Eco Wooden Lamp</h3>
+          <p>₹899</p>
+          <button onclick="orderNow('Eco Wooden Lamp')">Order Now</button>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/250" alt="Product 2" />
+          <h3>Vintage Wall Clock</h3>
+          <p>₹1,499</p>
+          <button onclick="orderNow('Vintage Wall Clock')">Order Now</button>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/250" alt="Product 3" />
+          <h3>Minimalist Desk Set</h3>
+          <p>₹1,099</p>
+          <button onclick="orderNow('Minimalist Desk Set')">Order Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email us at: <a href="mailto:contact@dewllers.com">contact@dewllers.com</a></p>
+      <form action="https://formspree.io/f/mnqkrxyz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Dewllers. All rights reserved.
+  </footer>
+
+  <script>
+    function orderNow(product) {
+      const phoneNumber = '91XXXXXXXXXX'; // Replace with real number
+      const message = `Hello, I'm interested in ordering: ${product}`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
